@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>projek temen untuk kedua kalinya</title>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+   <style>
+      #map {
+         height: 50vh; 
+         width: 75vw; 
+         margin: 0 auto; 
+      }
+
+      .keterangan {
+         margin: 0 auto;
+         max-width: 70%;
+         text-align: left;
+         text-align: center; 
+         opacity: 0; 
+         transition: opacity 0.5s ease-in-out; 
+         margin-top: 10px;
+      }
+
+      .keterangan.visible {
+         opacity: 1; 
+      }
+
+      .judul {
+         text-align: center;
+         font-size: 24px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      #keterangan img {
+         max-width: 50%;
+         margin-right: 10px;
+      }
+
+      #keterangan .gambar-container {
+      display: flex; 
+      align-items: center; 
+      }
+      
+      #keterangan p {
+      flex: 1; 
+      }
+   </style>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+   <h1 class="judul">Semoga Di-ACC</h1>
+   <div id="map"></div>
+   <div id="keterangan" class="keterangan" style="text-align: justify;"></div>
+   
+   <script>
+      var map = L.map('map', {
+         doubleClickZoom: false 
+      }).setView([-7.797068, 110.370529], 13); 
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         maxZoom: 19,
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+
+      var marker1 = L.marker([-7.803587814243915, 110.35619371015653]).addTo(map);
+
+      var marker2 = L.marker([-7.836321105572614, 110.16872746514727]).addTo(map);
+
+      var marker3 = L.marker([-7.797068, 110.379529]).addTo(map);
+
+      var marker4 = L.marker([-7.803587814243915, 110.35619371015653]).addTo(map);
+
+      var marker5 = L.marker([-7.836321105572614, 110.16872746514727]).addTo(map);
+
+      var marker6 = L.marker([-7.937282340963076, 110.63906044660285]).addTo(map);
+
+      var marker7 = L.marker([-7.9117720, 110.3111270]).addTo(map);
+      
+      function tampilkanKeterangan(keterangan) {
+         var keteranganDiv = document.getElementById('keterangan');
+         keteranganDiv.innerHTML = keterangan;
+         keteranganDiv.classList.add('visible'); 
+      }
+
+
+      function sembunyikanKeterangan() {
+         var keteranganDiv = document.getElementById('keterangan');
+         keteranganDiv.classList.remove('visible'); 
+      }
+
+      var keteranganVisible = false; 
+      var lastClickedMarker = null; 
+
+      marker1.on('click', function() {
+         if (lastClickedMarker === marker1) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganPertama = '<span class="bold">Kelurahan Maguwoharjo</span><br/><span class="bold">Mekanisme</span>: Staff Pemerintahan Sleman Timur dan Tengah mengeluarkan Peraturan Kebaktian Rakyat. Menindaklanjuti peraturan tersebut, Panewu Depok, Projosuyoto memerintahkan lurah untuk menjamin makanan bagi para pegawai instansi pemerintah dan badan-badan yang diakui pemerintah, juga memerintahkan seluruh pegawai kelurahan pimpinan Kepala Bagian Kemakmuran untuk memungut uang atau hasil bumi dari penduduk, dengan minimal 5% dan maksimal 25% dari penghasilannya.';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganPertama); 
+            }, 500); 
+            lastClickedMarker = marker1; 
+         }
+      });
+
+      marker2.on('click', function() {
+         if (lastClickedMarker === marker2) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganKedua = '<span class="bold">Kelurahan Madurejo <br/></span> <span class="bold">Mekanisme</span> : Dapur umum diselenggarakan di rumah Martorejo, selaku ketua bagian kemakmuran. Istri Martorejo bertugas sebagai penanggung jawab dapur umum. Kurir yang bertugas untuk mengantar makanan ke pos pasukan, mereka.';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganKedua); 
+            }, 500); 
+            lastClickedMarker = marker2; 
+         }
+      });
+
+      marker3.on('click', function() {
+         if (lastClickedMarker === marker3) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganKetiga = '<span class="bold">Kelurahan Tegaltirto, Berbah</span><br/> <span class="bold">Mekanisme</span> : Mereka membentuk Pemerintahan Militer Ketjamatan (PMKT) yang berguna untuk memempertahankan kemerdekaan Republik Indonsia. Lurah memimpin rakyat secara langsung sementara tugas camat dan Pemerintahan militer yang disebut Komando Onder Distrik Militer (KODM) adalah mengkoordinir lurah secara langsung dan mengumpulkan pajak innatura dan natura dari warga . Tugas KODM adalah menjamin suplai logistik bagi para gerilyawan. Untuk melancarkan pekerjaan lurah maka dibentuk Pemerintahan Militer Kelurahan (PMKL). <br/>ORGANISASI YANG DIBENTUK ATAU YANG ADA<br/>-KODM (Komando Distrik Militer)<br/>-PMKT (Pemerintah Militer Ketjamatan)<br/>-PMKL (Pemerintah Militer Kelurahan)<br/><br/> Peraturan yang digunakan untuk mengmpulkan logistik adalah:<br/>1.Kelurahan wajib menyotor beras sebanyak 2,5 kg dan uang Rp1000,00 untuk kebutuhan KODM.<br/>2.setiap orang dijatah 300 gram beras dan makan sebanyak 2 kal sehari.<br/>3.Pajak innatura dikumpulkan dengan cara setiap orang yang akan panen harus menyetor hasil panen sebanyak 1/8 atau 1/4 sesuai dengan peraturan.<br/>4.Suplai makanan yang tidak mencukupi selanjutnya diadakan hutang kepada masyarakat kaya untuk memenuhi logistik para pejuang berupa hutang barang dan uang.';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganKetiga); 
+            }, 500); 
+            lastClickedMarker = marker3; 
+         }
+      });
+
+      marker4.on('click', function() {
+         if (lastClickedMarker === marker4) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganKeempat = '<span class="bold">Djalan Ngabean NO.04</span><br/> <span class="bold">Mekanisme</span> : Melalui PPGD di Jalan Ngabean No.4 ini dilakukan penerimaan dan pendistribusian bantuan logistik untuk dapur umum di medan pertempuran. Semua persuratan dan pengiriman berupa makanan tahan lama, pakaian, majalah, sumbangan uang dan hiburan untuk garis depan dialamatkan ke Jalan Ngabean No.4 Yogyakarta. Beberapa beras dan makanan lain dikirimkan ke Jakarta, <span class="bold"> makanan yang dikirimkan ada tiga jenis yaitu</span> : <br/> 1. Tablet ringan dan mudah di bawa, terbuat dari nasi kering dan daging sapi kering.<br/> 2. Telur direbus lalu dibungkus supaya tahan lama.<br/> 3. Lontong tahan lama dibuat dari nasi goreng.';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganKeempat); 
+            }, 500); 
+            lastClickedMarker = marker4; 
+         }
+      });
+
+      marker5.on('click', function() {
+         if (lastClickedMarker === marker5) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganKelima = '<span class = "bold">Kalurahan Sidomulyo, Kecamatan Pengasih</span> <br/><span class = “bold”>Mekanisme</span> : Bantuan bahan makanan diatur oleh masing-masing kepala dukuh, penyelenggaraan dapur umum dilakukan di setiap pedukuhan secara bergiliran selama seminggu sekali. Sumbangan penduduk disesuaikan dengan hasil ladangnya. Dapur  umum disetiap pedukuhan dilaksanakan oleh pemuda-pemudi desa, Gerakan sosial pemudi dinamakan Pertiwi, mereka bahu membahu dengan pemuda yang dihimpun dalam Pager Desa.';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganKelima); 
+            }, 500); 
+            lastClickedMarker = marker5; 
+         }
+      });
+
+      marker6.on('click', function() {
+         if (lastClickedMarker === marker6) {
+            sembunyikanKeterangan(); 
+            lastClickedMarker = null; 
+         } else {
+            var keteranganKeenam = '<span class = "bold">Pedukuhan Gelaran, Kalurahan Bejiharjo, Kecamatan Karangmojo<br/> Mekanisme </span> : Selain dari bantuan pemerintah suplai makanan juga berasal dari penjualan sapi pemerintah sebanyak 7 ekor dan penjualan candu pada tanggal 1 februari 1949 sebanyak 8000 impling bantuan pabrik candu di Patuk. Dana perjuangan diambil dari Jawatan Kehutanan Rp.107.500,-. Dari Jawatan Praja sebesar Rp.170.000, untuk membayar gaji anggota KDM III sebagai jatah bulan Desember dan Januari, juga bantuan dari PPBM Gunungkidul  Rp.100.000,- untuk diberikan kepada masing-masing ODM sebesar Rp.5.000,- untuk persediaan. Dapur Umum dipimpin oleh Suraji, dibantu oleh juru masak: ibu dukuh, Ibu Suraji dan penduduk desa secara bergiliran. Bahan pokok didapat dari pusat. ';
+            sembunyikanKeterangan(); 
+            setTimeout(function() {
+               tampilkanKeterangan(keteranganKeenam); 
+            }, 500); 
+            lastClickedMarker = marker6; 
+         }
+      });
+      marker7.on('click', function() {
+            if (lastClickedMarker === marker7) {
+               sembunyikanKeterangan();
+               lastClickedMarker = null;
+            } else {
+               var imageUrl = 'gambar1.jpg';
+               var keteranganGambar = '<img src="' + imageUrl + '" alt="Rumah Bapak Broto Sudarmo. Bajang, Gilangharjo, Pandak, Bantul" /><p>Rumah Bapak Broto Sudarmo. Bajang, Gilangharjo, Pandak, Bantul.</p></div>';
+               sembunyikanKeterangan();
+               setTimeout(function() {
+                  tampilkanKeterangan(keteranganGambar);
+            }, 500);
+            lastClickedMarker = marker7;
+            }
+      });
+   </script>
+</body>
+</html>

@@ -139,7 +139,7 @@ if (isset($_POST['submit'])) {
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-				          <li><a href="blog-home.php">Blog</a></li>
+				          <li><a href="blog-home.php">Artworks</a></li>
 				          <li><a href="contact.php">Contact</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>

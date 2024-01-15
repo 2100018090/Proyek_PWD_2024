@@ -1,3 +1,4 @@
+
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -30,6 +31,26 @@
 			<link rel="stylesheet" href="css/main.css">
 		</head>
 		<body>
+		<?php
+			include "koneksi.php";
+			$pameran = mysqli_query($con, "SELECT * FROM pameran WHERE id_pameran = '3'");
+			$cetak_pameran = mysqli_fetch_array($pameran);
+		?>
+		<?php
+			include "koneksi.php";
+			$pameran1 = mysqli_query($con, "SELECT * FROM pameran WHERE id_pameran = '4'");
+			$cetak_pameran1 = mysqli_fetch_array($pameran1);
+		?>
+		<?php
+			include "koneksi.php";
+			$pameran2 = mysqli_query($con, "SELECT * FROM pameran WHERE id_pameran = '5'");
+			$cetak_pameran2 = mysqli_fetch_array($pameran2);
+		?>
+		<?php
+			include "koneksi.php";
+			$pameran3 = mysqli_query($con, "SELECT * FROM pameran WHERE id_pameran = '6'");
+			$cetak_pameran3 = mysqli_fetch_array($pameran3);
+		?>
 
 			  <header id="header" id="home">
 			  	<div class="container header-top">
@@ -63,7 +84,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-				          <li><a href="blog-home.php">Blog</a></li>
+				          <li><a href="blog-home.php">Artworks</a></li>
 				          <li><a href="contact.php">Contact</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>
@@ -106,43 +127,43 @@
 					<div class="row">
 						<div class="col-lg-6 event-left">
 							<div class="single-events">
-								<img class="img-fluid" src="img/u1.jpg" alt="">
-								<a href="#"><h4>Event on the rock solid carbon</h4></a>
-								<h6><span>21st February</span> at Central government museum</h6>
+								<img class="img-fluid" id="<?= $cetak_pameran['id_pameran']; ?>" src="img/<?= $cetak_pameran['gambar_pameran']; ?>" alt=""><h4>
+								<a href="#"><h4><?= $cetak_pameran['nama_pameran']; ?></h4></a>
+								<h6><span><?= $cetak_pameran['tgl_mulai']; ?></span> sampai <?= $cetak_pameran['tgl_akhir']; ?></h6>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially.
+								<?= $cetak_pameran['deskripsi']; ?>
 								</p>
-								<a href="#" class="primary-btn text-uppercase">View Details</a>
+								<a href="img/<?= $cetak_pameran['gambar_pameran']; ?>" class="primary-btn text-uppercase">View Details</a>
 							</div>
 							<div class="single-events">
-								<img class="img-fluid" src="img/u3.jpg" alt="">
-								<a href="#"><h4>Event on the rock solid carbon</h4></a>
-								<h6><span>21st February</span> at Central government museum</h6>
+								<img class="img-fluid" id="<?= $cetak_pameran1['id_pameran']; ?>" src="img/<?= $cetak_pameran1['gambar_pameran']; ?>" alt="">
+								<a href="#"><h4><?= $cetak_pameran1['nama_pameran']; ?></h4></a>
+								<h6><span><?= $cetak_pameran1['tgl_mulai']; ?></span> sampai <?= $cetak_pameran1['tgl_akhir']; ?></h6>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially.
+								<?= $cetak_pameran1['deskripsi']; ?>
 								</p>
 								<a href="#" class="primary-btn text-uppercase">View Details</a>
 							</div>							
 						</div>
 						<div class="col-lg-6 event-right">
 							<div class="single-events">
-								<a href="#"><h4>Event on the rock solid carbon</h4></a>
-								<h6><span>21st February</span> at Central government museum</h6>
+								<a href="#"><h4><h4><?= $cetak_pameran2['nama_pameran']; ?></h4></a>
+								<h6><span><?= $cetak_pameran2['tgl_mulai']; ?></span> sampai <?= $cetak_pameran2['tgl_akhir']; ?></h6>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially.
+								<?= $cetak_pameran2['deskripsi']; ?>
 								</p>
 								<a href="#" class="primary-btn text-uppercase">View Details</a>
-								<img class="img-fluid" src="img/u2.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_pameran2['gambar_pameran']; ?>" alt="">
 							</div>
 							<div class="single-events">
 								
-								<a href="#"><h4>Event on the rock solid carbon</h4></a>
-								<h6><span>21st February</span> at Central government museum</h6>
+								<a href="#"><h4><?= $cetak_pameran3['nama_pameran']; ?></h4></a>
+								<h6><span><?= $cetak_pameran3['tgl_mulai']; ?></span> sampai <?= $cetak_pameran3['tgl_akhir']; ?></h6>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially.
+								<?= $cetak_pameran3['deskripsi']; ?>
 								</p>
 								<a href="#" class="primary-btn text-uppercase">View Details</a>
-								<img class="img-fluid" src="img/u4.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_pameran3['gambar_pameran']; ?>" alt="">
 							</div>							
 						</div>
 					</div>

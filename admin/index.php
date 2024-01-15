@@ -37,7 +37,7 @@ require 'functions.php';
                                 </p>
                             </div>
                         </div>
-                        <form action="login_admin.php" method="post" class="signin-form">
+                        <form action="#" method="post" class="signin-form">
                             <div class="form-group mb-3">
                                 <label class="label" for="name"><?php echo $usernameErr; ?></label>
                                 <input type="text" class="form-control" placeholder="Username" fdprocessedid="0fcp7r" name="username" id="username" autofocus autocomplete="off">

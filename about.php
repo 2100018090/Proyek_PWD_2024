@@ -63,7 +63,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-				          <li><a href="blog-home.php">Blog</a></li>
+				          <li><a href="blog-home.php">Artworks</a></li>
 				          <li><a href="contact.php">Contact</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>
@@ -99,14 +99,14 @@
 					<div class="row">
 						<div class="col-lg-6 quote-left">
 							<h1>
-								<span>Music</span> gives soul to the universe, <br>
-								wings to the <span>mind</span>, flight <br>
-								to the <span>imagination</span>.
+								<span>Heritage Revolution</span> gives soul <br>
+								to the universe, wings to <br> the <span>mind</span>, flight to the <br>
+								<span>imagination</span>.
 							</h1>
 						</div>
 						<div class="col-lg-6 quote-right">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								panggung di mana sejarah tak hanya diabadikan, tetapi dihidupkan kembali dengan sentuhan revolusioner. Temukan keajaiban di setiap sudut, di mana artefak langka dan teknologi mutakhir menyatu dalam sebuah tarian epik. Dalam perpaduan ajaib antara masa lalu dan masa kini, pengunjung kami diajak untuk merasakan detik-detik paling mendalam dari perjalanan peradaban. Bersiaplah untuk menggali kekayaan warisan dengan mata yang takjub, di mana Museum Heritage Revolution menjadi perhentian yang tak terlupakan dalam petualangan Anda melintasi zaman. Selamat menikmati sensasi eksplorasi yang tak tertandingi!
 							</p>
 						</div>
 					</div>

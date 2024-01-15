@@ -98,9 +98,39 @@ $total_harga = $row3['total_harga'];
               });
         </script>
         <li><i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;&nbsp;<span>Biaya</span></li>
-        <li><i class="fa-solid fa-camera-retro"></i>&nbsp;&nbsp;<span>Pameran</span></li>
-        <li><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;<span>Koleksi</span></li>
-        <li><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;<span>Karya_Seni</span></li>
+        <li id="Pameran"><i class="fa-solid fa-camera-retro"></i>&nbsp;&nbsp;<span>Pameran</span></li>
+        <script>
+            // Mendapatkan elemen dengan id 'dashboardLink'
+            var dashboardLink = document.getElementById('Pameran');
+
+            // Menambahkan event listener untuk menanggapi klik pada elemen
+            dashboardLink.addEventListener('click', function() {
+                // Pindah ke halaman lain
+                window.location.href = 'pameran.php';
+            });
+        </script>
+        <li id="Koleksi"><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;<span>Koleksi</span></li>
+            <script>
+                // Mendapatkan elemen dengan id 'dashboardLink'
+                var dashboardLink = document.getElementById('Koleksi');
+
+                // Menambahkan event listener untuk menanggapi klik pada elemen
+                dashboardLink.addEventListener('click', function() {
+                    // Pindah ke halaman lain
+                    window.location.href = 'Koleksi.php';
+                });
+            </script>
+        <li id="Karya_Seni"><i class="fa-regular fa-image"></i>&nbsp;&nbsp;<span>Karya_Seni</span></li>
+        <script>
+            // Mendapatkan elemen dengan id 'dashboardLink'
+            var dashboardLink = document.getElementById('Karya_Seni');
+
+            // Menambahkan event listener untuk menanggapi klik pada elemen
+            dashboardLink.addEventListener('click', function() {
+                // Pindah ke halaman lain
+                window.location.href = 'karya_seni.php';
+            });
+        </script>
     </ul>
 </div>
 

@@ -30,6 +30,26 @@
 			<link rel="stylesheet" href="css/main.css">
 		</head>
 		<body>
+		<?php
+			include "koneksi.php";
+			$karya_seni = mysqli_query($con, "SELECT * FROM karya_seni WHERE id_karyaseni	 = '2'");
+			$cetak_karyaseni = mysqli_fetch_array($karya_seni );
+		?>
+		<?php
+			include "koneksi.php";
+			$karya_seni1 = mysqli_query($con, "SELECT * FROM karya_seni WHERE id_karyaseni	 = '3'");
+			$cetak_karyaseni1 = mysqli_fetch_array($karya_seni1);
+		?>
+		<?php
+			include "koneksi.php";
+			$karya_seni2 = mysqli_query($con, "SELECT * FROM karya_seni WHERE id_karyaseni	 = '4'");
+			$cetak_karyaseni2 = mysqli_fetch_array($karya_seni2);
+		?>
+		<?php
+			include "koneksi.php";
+			$karya_seni3 = mysqli_query($con, "SELECT * FROM karya_seni WHERE id_karyaseni	 = '5'");
+			$cetak_karyaseni3 = mysqli_fetch_array($karya_seni3);
+		?>
 
 			  <header id="header" id="home">
 			  	<div class="container header-top">
@@ -63,7 +83,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-				          <li><a href="blog-home.php">Blog</a></li>
+				          <li><a href="blog-home.php">Artworks</a></li>
 				          <li><a href="contact.php">Contact</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>
@@ -85,9 +105,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Blog Home				
+								Artworks				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="blog-home.html"> Blog Home</a></p>
+							<p class="text-white link-nav"><a href="home.php">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="blog-home.php"> Artworks</a></p>
 						</div>											
 					</div>
 				</div>
@@ -100,20 +120,19 @@
 					<div class="row">
 						<div class="col-lg-8 post-list blog-post-list">
 							<div class="single-post">
-								<img class="img-fluid" src="img/blog/p1.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_karyaseni['gambar_karya_seni']; ?>" alt="">
 								<ul class="tags">
-									<li><a href="#">Art, </a></li>
-									<li><a href="#">Technology, </a></li>
-									<li><a href="#">Fashion</a></li>
+									<li><a href="#"><?= $cetak_karyaseni['th_pembuatan']; ?></a></li>
+									<li><a href="#">, <?= $cetak_karyaseni['seniman']; ?></a></li>
+									
 								</ul>
 								<a href="blog-single.html">
 									<h1>
-										Cartridge Is Better Than Ever
-										A Discount Toner
+										<?= $cetak_karyaseni['nama_karya']; ?>
 									</h1>
 								</a>
 									<p>
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
+										<?= $cetak_karyaseni['deskripsi']; ?>
 									</p>
 								<div class="bottom-meta">
 									<div class="user-details row align-items-center">
@@ -136,20 +155,18 @@
 								</div>
 							</div>
 							<div class="single-post">
-								<img class="img-fluid" src="img/blog/p2.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_karyaseni1['gambar_karya_seni']; ?>" alt="">
 								<ul class="tags">
-									<li><a href="#">Art, </a></li>
-									<li><a href="#">Technology, </a></li>
-									<li><a href="#">Fashion</a></li>
+									<li><a href="#"><?= $cetak_karyaseni1['th_pembuatan']; ?></a></li>
+									<li><a href="#">, <?= $cetak_karyaseni1['seniman']; ?></a></li>
 								</ul>
 								<a href="blog-single.html">
 									<h1>
-										Cartridge Is Better Than Ever
-										A Discount Toner
+										<?= $cetak_karyaseni1['nama_karya']; ?>
 									</h1>
-								</a>
+								</a>	
 									<p>
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
+										<?= $cetak_karyaseni1['deskripsi']; ?>
 									</p>
 								<div class="bottom-meta">
 									<div class="user-details row align-items-center">
@@ -172,20 +189,18 @@
 								</div>
 							</div>
 							<div class="single-post">
-								<img class="img-fluid" src="img/blog/p3.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_karyaseni2['gambar_karya_seni']; ?>" alt="">
 								<ul class="tags">
-									<li><a href="#">Art, </a></li>
-									<li><a href="#">Technology, </a></li>
-									<li><a href="#">Fashion</a></li>
+									<li><a href="#"><?= $cetak_karyaseni2['th_pembuatan']; ?></a></li>
+									<li><a href="#">, <?= $cetak_karyaseni2['seniman']; ?></a></li>
 								</ul>
 								<a href="blog-single.html">
 									<h1>
-										Cartridge Is Better Than Ever
-										A Discount Toner
+										<?= $cetak_karyaseni2['nama_karya']; ?>
 									</h1>
 								</a>
 									<p>
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
+										<?= $cetak_karyaseni2['deskripsi']; ?>
 									</p>
 								<div class="bottom-meta">
 									<div class="user-details row align-items-center">
@@ -208,20 +223,18 @@
 								</div>
 							</div>
 							<div class="single-post">
-								<img class="img-fluid" src="img/blog/p4.jpg" alt="">
+								<img class="img-fluid" src="img/<?= $cetak_karyaseni3['gambar_karya_seni']; ?>" alt="">
 								<ul class="tags">
-									<li><a href="#">Art, </a></li>
-									<li><a href="#">Technology, </a></li>
-									<li><a href="#">Fashion</a></li>
+									<li><a href="#"><?= $cetak_karyaseni3['th_pembuatan']; ?></a></li>
+									<li><a href="#">, <?= $cetak_karyaseni3['seniman']; ?></a></li>
 								</ul>
 								<a href="blog-single.html">
 									<h1>
-										Cartridge Is Better Than Ever
-										A Discount Toner
+										<?= $cetak_karyaseni3['nama_karya']; ?>
 									</h1>
 								</a>
 									<p>
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
+										<?= $cetak_karyaseni3['deskripsi']; ?>
 									</p>
 								<div class="bottom-meta">
 									<div class="user-details row align-items-center">

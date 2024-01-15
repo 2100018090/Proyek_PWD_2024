@@ -31,6 +31,77 @@
 		</head>
 		<body>
 
+		<?php
+			include "koneksi.php";
+			$koleksi = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '3'");
+			$cetak_koleksi = mysqli_fetch_array($koleksi);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi1 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '4'");
+			$cetak_koleksi1 = mysqli_fetch_array($koleksi1);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi2 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '5'");
+			$cetak_koleksi2 = mysqli_fetch_array($koleksi2);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi3 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '6'");
+			$cetak_koleksi3 = mysqli_fetch_array($koleksi3);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi4 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '7'");
+			$cetak_koleksi4 = mysqli_fetch_array($koleksi4);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi5 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '8'");
+			$cetak_koleksi5 = mysqli_fetch_array($koleksi5);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi6 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '9'");
+			$cetak_koleksi6 = mysqli_fetch_array($koleksi6);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi7 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '10'");
+			$cetak_koleksi7 = mysqli_fetch_array($koleksi7);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi8 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '11'");
+			$cetak_koleksi8 = mysqli_fetch_array($koleksi8);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi9 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '12'");
+			$cetak_koleksi9 = mysqli_fetch_array($koleksi9);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi10 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '13'");
+			$cetak_koleksi10 = mysqli_fetch_array($koleksi10);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi11 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '14'");
+			$cetak_koleksi11 = mysqli_fetch_array($koleksi11);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi12 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '15'");
+			$cetak_koleksi12 = mysqli_fetch_array($koleksi12);
+		?>
+		<?php
+			include "koneksi.php";
+			$koleksi13 = mysqli_query($con, "SELECT * FROM koleksi WHERE id_koleksi = '17'");
+			$cetak_koleksi13 = mysqli_fetch_array($koleksi13);
+		?>
+
 			  <header id="header" id="home">
 			  	<div class="container header-top">
 			  		<div class="row">
@@ -63,7 +134,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-				          <li><a href="blog-home.php">Blog</a></li>
+				          <li><a href="blog-home.php">Artworks</a></li>
 				          <li><a href="contact.php">Contact</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>
@@ -105,20 +176,20 @@
 						</div>
 					</div>						
 					<div id="grid-container" class="row">
-						<a class="single-gallery" href="img/g1.jpg"><img class="grid-item" src="img/g1.jpg"></a>
-						<a class="single-gallery" href="img/g2.jpg"><img class="grid-item" src="img/g2.jpg"></a>
-						<a class="single-gallery" href="img/g3.jpg"><img class="grid-item" src="img/g3.jpg"></a>
-						<a class="single-gallery" href="img/g4.jpg"><img class="grid-item" src="img/g4.jpg"></a>
-						<a class="single-gallery" href="img/g5.jpg"><img class="grid-item" src="img/g5.jpg"></a>
-						<a class="single-gallery" href="img/g6.jpg"><img class="grid-item" src="img/g6.jpg"></a>
-						<a class="single-gallery" href="img/g7.jpg"><img class="grid-item" src="img/g7.jpg"></a>
-						<a class="single-gallery" href="img/g8.jpg"><img class="grid-item" src="img/g8.jpg"></a>
-						<a class="single-gallery" href="img/g9.jpg"><img class="grid-item" src="img/g9.jpg"></a>
-						<a class="single-gallery" href="img/g10.jpg"><img class="grid-item" src="img/g10.jpg"></a>
-						<a class="single-gallery" href="img/g11.jpg"><img class="grid-item" src="img/g11.jpg"></a>
-						<a class="single-gallery" href="img/g12.jpg"><img class="grid-item" src="img/g12.jpg"></a>
-						<a class="single-gallery" href="img/g4.jpg"><img class="grid-item" src="img/g4.jpg"></a>
-						<a class="single-gallery" href="img/g5.jpg"><img class="grid-item" src="img/g5.jpg"></a>						
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi1['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi1['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi2['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi2['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi3['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi3['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi4['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi4['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi5['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi5['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi6['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi6['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi7['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi7['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi8['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi8['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi9['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi9['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi10['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi10['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi11['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi11['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi12['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi12['gambar_koleksi']; ?>"></a>
+						<a class="single-gallery" href="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi13['gambar_koleksi']; ?>"><img class="grid-item" src="img/gallery-20240113T174808Z-001/gallery/<?= $cetak_koleksi13['gambar_koleksi']; ?>"></a>						
 					</div>	
 				</div>	
 			</section>
